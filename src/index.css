@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-orbitron {
+    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-rajdhani {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-mono-tech {
+    font-family: 'Share Tech Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.45), inset 0 0 8px rgba(0, 240, 255, 0.2);
+  }
+  .glow-pink {
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.45), inset 0 0 8px rgba(255, 0, 85, 0.2);
+  }
+  .glow-yellow {
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.45), inset 0 0 8px rgba(255, 230, 0, 0.2);
+  }
+  .glow-purple {
+    box-shadow: 0 0 15px rgba(176, 0, 255, 0.45), inset 0 0 8px rgba(176, 0, 255, 0.2);
+  }
+  .glow-green {
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.45), inset 0 0 8px rgba(0, 255, 102, 0.2);
+  }
+  .glow-orange {
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.45), inset 0 0 8px rgba(255, 106, 0, 0.2);
+  }
+}
+
+/* CRT Scanline Overlay */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 26, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+*, *::before, *::after {
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+}
+
+html, body, #root {
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  overscroll-behavior: none !important;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+/* Screen Shake Animations (Disabled to keep gaming area stationary) */
+.shake-light {
+  animation: none !important;
+}
+
+.shake-heavy {
+  animation: none !important;
+}
+
+/* Pulse energy beam */
+@keyframes neonPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: brightness(1.3); }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 1.8s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090314;
+}
+::-webkit-scrollbar-thumb {
+  background: #251442;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0055;
+}

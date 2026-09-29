@@ -1,0 +1,8 @@
+{
+  "name": "BLOCK OVERLOAD: 2077",
+  "description": "Cyberpunk 8x8 neon block puzzle game with particle blasts, procedural synth audio, multi-line combos, power-up systems, and overdrive game modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
